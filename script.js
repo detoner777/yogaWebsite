@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 
         //timer
-        let deadline = "2019-04-13";
+        let deadline = "2019-10-13";
         function getTimeRemaining(endtime) {
                 let t = Date.parse(endtime) - Date.parse(new Date()),
                 seconds = Math.floor((t/1000) % 60),
@@ -81,4 +81,29 @@ window.addEventListener("DOMContentLoaded", function() {
              }
         }
         setClock('timer', deadline);
+
+
+// Modal weandow
+
+    let more = document.querySelector('.more'),
+     overlay = document.querySelector('.overlay'),
+       close = document.querySelector('.popup-close');
+
+    more.addEventListener('click', function () {
+        overlay.style.display = 'block';
+        this.classList.add('more-splash');
+        document.body.style.overflow = 'hidden';
+    });
+      
+    close.addEventListener ('click', function () {
+        overlay.style.display = 'none';
+        more.classList.add('more-splash');
+        document.body.style.overflow = '';
+    });
+
+
 });
+
+
+
+
