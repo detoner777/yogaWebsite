@@ -101,6 +101,22 @@ window.addEventListener("DOMContentLoaded", function() {
         document.body.style.overflow = '';
     });
 
+// Modal for tabs
+
+let btn = document.querySelector(".description-btn");
+   
+
+btn.addEventListener('click', function () {
+   overlay.style.display = 'block';
+   this.classList.add('more-splash');
+   document.body.style.overflow = 'hidden';
+});
+ 
+close.addEventListener ('click', function () {
+   overlay.style.display = 'none';
+   btn.classList.add('more-splash');
+   document.body.style.overflow = '';
+});
 
 });
 
